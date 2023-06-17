@@ -1,5 +1,6 @@
 import Form from "./Form";
-import Tasks from "./Tasks";
+// import Tasks from "./Tasks";
+import Buttons from "./Buttons";
 
 const tasks = [
   { id: 1, content: "spędzic wieczór ze znajomymi", done: false },
@@ -7,45 +8,36 @@ const tasks = [
   { id: 3, content: "zjeść kolację", done: true },
 ];
 const tasksHidden = false;
+const areAllTasksDone = tasks.every((task) => task.done);
 
 function App() {
   return (
-    <div className="App">
+    <main>
       <h1 className="header">Lista zadań</h1>
-      <main>
-        <section className="section">
-          <h2 className="section__title">Dodaj nowe zadanie</h2>
-          <Form />
-        </section>
+      <section className="section">
+        <h2 className="section__title">Dodaj nowe zadanie</h2>
+        <Form />
+      </section>
 
-        <section className="section">
-          <div className="section__header section__header--withButtons">
-            <h2 className="section__title section__title--withoutBorder">
-              Lista zadań
-            </h2>
-            <Buttons tasks={tasks} tasksHidden={tasksHidden} areAllTasksDone={areAllTasksDone} />
-          </div>
+      <section className="section">
+        <div className="section__header section__header--withButtons">
+          <h2 className="section__title section__title--withoutBorder">
+            Lista zadań
+          </h2>
+          <Buttons
+            tasks={tasks}
+            tasksHidden={tasksHidden}
+            areAllTasksDone={areAllTasksDone}
+          />
+        </div>
 
-          {/* <Tasks
+        {/* <Tasks
             tasks={tasks}
             tasksHidden={tasksHidden}
             areAllTasksDone={areAllTasksDone}
           /> */}
-          <Form/>
-        </section>
-
-        <section className="section">
-          <div className="section__header">
-            <h2 className="section__title section__title--withoutBorder">
-              Lista zadań
-            </h2>
-            <span className="section__buttons"></span>
-          </div>
-
-          <Tasks tasks={tasks} tasksHidden={tasksHidden} />
-        </section>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 }
 
