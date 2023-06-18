@@ -31,6 +31,6 @@
   cursor: pointer;
   color: hsl(180, 100%, 32%);
 }
-.buttons_checkAllTasksDoneButton:disabled {
+.buttons__checkAllTasksDoneButton:disabled {
   color: grey;
 }
