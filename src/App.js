@@ -1,5 +1,5 @@
 import Form from "./Form";
-// import Tasks from "./Tasks";
+import Tasks from "./Tasks";
 import Buttons from "./Buttons";
 import SectionTwo from "./Section/section-two";
 import SectionOne from "./Section/section-one";
@@ -25,7 +25,7 @@ function App() {
           <Buttons tasks={tasks} tasksHidden={tasksHidden}  areAllTasksDone={areAllTasksDone}/>
         }
         sectionTitle="Lista zadań"
-        // sectionBody={<Tasks tasks={tasks} tasksHidden={tasksHidden} />}
+        sectionBody={<Tasks tasks={tasks} tasksHidden={tasksHidden} />}
       />
     </main>
   );
