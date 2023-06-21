@@ -3,7 +3,7 @@
 This project was bootstrapped with [Create React App](https://sofyahreksoftware.github.io/react_to-do-list/).
 
 ## Demo
-[Link to the main page of Tasks List](https://sofyahreksoftware.github.io/to-do-list/)
+[Link to the main page of Tasks List](https://sofyahreksoftware.github.io/react_to-do-list/)
 ## Description
 
 An application provides makind a to-do list. You also can mark and cross done tasks.
