@@ -4,30 +4,41 @@ This project was bootstrapped with [Create React App](https://sofyahreksoftware.
 
 ## Demo
 [Link to the main page of Tasks List](https://sofyahreksoftware.github.io/react_to-do-list/)
-## Description
 
+## Technologies
+- HTML
+- Google Fonts
+- CSS
+- Normalize CSS
+- BEM convention
+- Webpack
+- Babel
+- React
+- Grid
+- Flex
+- ReactDOM 
+- PostCSS  
+
+
+## Description
 An application provides makind a to-do list. You also can mark and cross done tasks.
 
 ## Instruction. How to use an application?
 
 ### <span style="color:yellow;">How to add a task?</span>
-
 To add a task you need to fill in a form with a task and click a button on the right or at the bottom if you use it on telephone?
 
 ### <span style="color:yellow;">How to remove task?</span>
-
 To remove a task you need to click a red button on the right side of the task?
 
 ### <span style="color:yellow;">How to mark that the task is done?</span>
-
 To mark that the task is done you need to click a green button on the left side of the task and then it will change to check mark?
 
-## Available Scripts
 
+## Available Scripts
 In the project directory, you can run:
 
 ### `npm start`
-
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
@@ -35,7 +46,6 @@ The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
 ### `npm run build`
-
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
@@ -45,7 +55,6 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ### `npm run eject`
-
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
 If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
