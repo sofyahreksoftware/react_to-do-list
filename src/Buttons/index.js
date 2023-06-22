@@ -2,7 +2,7 @@ import "./style.css";
 
 const Buttons = ({ tasks, tasksHidden, areAllTasksDone }) =>
   tasks.length > 0 && (
-    <span className="buttons">
+    <div className="buttons">
       <button className="buttons__button">
         {tasksHidden ? "Pokaż" : "Ukryj"} ukończone
       </button>
@@ -13,7 +13,7 @@ const Buttons = ({ tasks, tasksHidden, areAllTasksDone }) =>
       >
         Oznacz wszystkie
       </button>
-    </span>
+    </div>
   );
-
 export default Buttons;
+ 
