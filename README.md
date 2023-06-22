@@ -25,6 +25,8 @@ An application provides makind a to-do list. You also can mark and cross done ta
 
 ## Instruction. How to use an application?
 
+![Screenshot of application](src/app-screenshot.png)
+
 ### <span style="color:yellow;">How to add a task?</span>
 To add a task you need to fill in a form with a task and click a button on the right or at the bottom if you use it on telephone?
 
