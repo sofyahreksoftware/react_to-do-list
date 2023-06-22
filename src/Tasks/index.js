@@ -9,7 +9,7 @@ const Tasks = ({ tasks, tasksHidden }) => (
           task.done && tasksHidden ? "tasks__item--hidden" : ""
         }`}
       >
-        <button className="tasks__button tasks__button--green tasks__itemElement">
+        <button className="tasks__button tasks__button--green">
           {task.done ? (
             <i className="fa fa-check" aria-hidden="true"></i>
           ) : null}
@@ -21,7 +21,7 @@ const Tasks = ({ tasks, tasksHidden }) => (
         >
           {task.content}
         </span>
-        <button className="tasks__button tasks__buttonRemove tasks__itemElement">
+        <button className="tasks__button tasks__buttonRemove">
           <i className="fa fa-trash"></i>
         </button>
       </li>

@@ -13,9 +13,6 @@
 .tasks__item--hidden {
   display: none;
 }
-.tasks__itemElement {
-  align-self: center;
-}
 .tasks__taskContent {
   align-self: center;
 }
