@@ -1,8 +1,7 @@
 import Form from "./Form";
 import Tasks from "./Tasks";
 import Buttons from "./Buttons";
-import SectionTwo from "./Section/section-two";
-import SectionOne from "./Section/section-one";
+import Section from "./Section";
 import Header from "./Header";
 
 const tasks = [
@@ -18,9 +17,9 @@ function App() {
     <main>
       <Header headerName="Lista zadań" />
 
-      <SectionOne sectionBody={<Form />} sectionTitle="Dodaj nowe zadanie" />
+      <Section sectionBody={<Form />} sectionTitle="Dodaj nowe zadanie" />
 
-      <SectionTwo
+      <Section
         headerAdditionalContent={
           <Buttons tasks={tasks} tasksHidden={tasksHidden}  areAllTasksDone={areAllTasksDone}/>
         }
