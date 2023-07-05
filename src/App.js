@@ -5,20 +5,24 @@ import Section from "./Section";
 import Header from "./Header";
 import React, { useState } from "react";
 
-const tasks = [
-  { id: 1, content: "spędzic wieczór ze znajomymi", done: true },
-  { id: 2, content: "stworzyć projekt w Reakcie", done: false },
-  { id: 3, content: "zjeść kolację", done: true },
-];
-const areAllTasksDone = tasks.every((task) => task.done);
-const areAnyDone = tasks.some((task) => task.done);
-
 function App() {
+  const [tasks, setTasks] = useState([
+    { id: 1, content: "spędzic wieczór ze znajomymi", done: true },
+    { id: 2, content: "stworzyć projekt w Reakcie", done: false },
+    { id: 3, content: "zjeść kolację", done: true },
+  ]);
+
+  const areAllTasksDone = tasks.every((task) => task.done);
+  console.log(areAllTasksDone);
+  const areAnyDone = tasks.some((task) => task.done);
+
   const [tasksHidden, setTasksHidden] = useState(false);
   const toggleTaskHidden = () => {
     setTasksHidden(areAnyDone ? (tasksHidden) => !tasksHidden : null);
   };
 
+  const completeAllTasks = () =>
+    setTasks(tasks.map((task) => ({ ...task, done: true })));
   return (
     <main>
       <Header headerName="Lista zadań" />
@@ -32,6 +36,7 @@ function App() {
             tasks={tasks}
             tasksHidden={tasksHidden}
             areAllTasksDone={areAllTasksDone}
+            completeAllTasks={completeAllTasks}
           />
         }
         sectionTitle="Lista zadań"
