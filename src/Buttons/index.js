@@ -1,9 +1,9 @@
 import "./style.css";
 
-const Buttons = ({ tasks, tasksHidden, areAllTasksDone }) =>
+const Buttons = ({ tasks, tasksHidden, areAllTasksDone, toggleTaskHidden }) =>
   tasks.length > 0 && (
     <div className="buttons">
-      <button className="buttons__button">
+      <button className="buttons__button" onClick={toggleTaskHidden}>
         {tasksHidden ? "Pokaż" : "Ukryj"} ukończone
       </button>
 
@@ -16,4 +16,3 @@ const Buttons = ({ tasks, tasksHidden, areAllTasksDone }) =>
     </div>
   );
 export default Buttons;
- 
