@@ -1,9 +1,9 @@
+import React, { useState } from "react";
 import Form from "./Form";
 import Tasks from "./Tasks";
 import Buttons from "./Buttons";
 import Section from "./Section";
 import Header from "./Header";
-import React, { useState } from "react";
 
 function App() {
   const [tasks, setTasks] = useState([
@@ -13,16 +13,27 @@ function App() {
   ]);
 
   const areAllTasksDone = tasks.every((task) => task.done);
-  console.log(areAllTasksDone);
   const areAnyDone = tasks.some((task) => task.done);
 
   const [tasksHidden, setTasksHidden] = useState(false);
   const toggleTaskHidden = () => {
-    setTasksHidden(areAnyDone ? (tasksHidden) => !tasksHidden : null);
+    setTasksHidden(areAnyDone ? !tasksHidden : null);
   };
 
   const completeAllTasks = () =>
     setTasks(tasks.map((task) => ({ ...task, done: true })));
+
+  const toggleTaskDone = (id) => {
+    setTasks((tasks) =>
+      tasks.map((task) => {
+        if (task.id === id) {
+          return { ...task, done: !task.done };
+        }
+        return task;
+      })
+    );
+  };
+
   return (
     <main>
       <Header headerName="Lista zadań" />
@@ -40,7 +51,13 @@ function App() {
           />
         }
         sectionTitle="Lista zadań"
-        sectionBody={<Tasks tasks={tasks} tasksHidden={tasksHidden} />}
+        sectionBody={
+          <Tasks
+            tasks={tasks}
+            tasksHidden={tasksHidden}
+            toggleTaskDone={toggleTaskDone}
+          />
+        }
       />
     </main>
   );
