@@ -34,6 +34,10 @@ function App() {
     );
   };
 
+  const removeTask = (id) => {
+    setTasks((tasks) => tasks.filter((task) => task.id !== id));
+  };
+
   return (
     <main>
       <Header headerName="Lista zadań" />
@@ -56,6 +60,7 @@ function App() {
             tasks={tasks}
             tasksHidden={tasksHidden}
             toggleTaskDone={toggleTaskDone}
+            removeTask={removeTask}
           />
         }
       />
