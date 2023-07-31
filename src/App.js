@@ -38,8 +38,16 @@ function App() {
     setTasks((tasks) => tasks.filter((task) => task.id !== id));
   };
 
-  const addNewTask = (newTaskContent) =>
-    setTasks((tasks) => [...tasks, { content: newTaskContent }]);
+  const addNewTask = (newTaskContent) => {
+    setTasks((tasks) => [
+      ...tasks,
+      {
+        id: tasks.length ? [tasks.length] : 1,
+        content: newTaskContent,
+        done: false,
+      },
+    ]);
+  };
 
   return (
     <main>
