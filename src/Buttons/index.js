@@ -10,7 +10,7 @@ const Buttons = ({
   tasks.length > 0 && (
     <div className="buttons">
       <button className="buttons__button" onClick={toggleTaskHidden}>
-        {tasksHidden ? "Pokaż" : "Ukryj"} ukończone
+        {tasksHidden ? "Pokaż" : "Ukryj"}&nbsp;ukończone
       </button>
 
       <button
@@ -18,7 +18,7 @@ const Buttons = ({
         onClick={completeAllTasks}
         disabled={areAllTasksDone}
       >
-        Oznacz wszystkie
+        Oznacz&nbsp;wszystkie
       </button>
     </div>
   );
