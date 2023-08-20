@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import Form from "./Form";
 import Tasks from "./Tasks";
 import Buttons from "./Buttons";
@@ -42,12 +42,16 @@ function App() {
     setTasks((tasks) => [
       ...tasks,
       {
-        id: tasks.length ? [tasks.length] : 1,
+        id: tasks.length ? tasks.length + 1 : 0,
         content: newTaskContent,
         done: false,
       },
     ]);
   };
+
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
 
   return (
     <main>
