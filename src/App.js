@@ -6,11 +6,9 @@ import Section from "./Section";
 import Header from "./Header";
 
 function App() {
-  const [tasks, setTasks] = useState([
-    { id: 1, content: "spędzic wieczór ze znajomymi", done: true },
-    { id: 2, content: "stworzyć projekt w Reakcie", done: false },
-    { id: 3, content: "zjeść kolację", done: true },
-  ]);
+  const [tasks, setTasks] = useState(
+    JSON.parse(localStorage.getItem("tasks")) || null
+  );
 
   const areAllTasksDone = tasks.every((task) => task.done);
   const areAnyDone = tasks.some((task) => task.done);
