@@ -42,7 +42,7 @@ function App() {
     setTasks((tasks) => [
       ...tasks,
       {
-        id: tasks.length ? tasks.length + 1 : 0,
+        id: tasks.length ? tasks[tasks.length - 1].id + 1 : 0,
         content: newTaskContent,
         done: false,
       },
