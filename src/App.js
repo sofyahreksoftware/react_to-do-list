@@ -13,7 +13,7 @@ function App() {
   const areAllTasksDone = tasks.every((task) => task.done);
   const areAnyDone = tasks.some((task) => task.done);
 
-  const [tasksHidden, setTasksHidden] = useState(false);
+  const [tasksHidden, setTasksHidden] = useState( JSON.parse(localStorage.getItem("tasksHidden")) || false);
   const toggleTaskHidden = () => {
     setTasksHidden(areAnyDone ? !tasksHidden : null);
   };
@@ -49,7 +49,8 @@ function App() {
 
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
-  }, [tasks]);
+    localStorage.setItem("tasksHidden", JSON.stringify(tasksHidden));
+  }, [tasks, tasksHidden]);
 
   return (
     <main>
