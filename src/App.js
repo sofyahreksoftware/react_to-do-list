@@ -7,13 +7,15 @@ import Header from "./Header";
 
 function App() {
   const [tasks, setTasks] = useState(
-    JSON.parse(localStorage.getItem("tasks")) || null
+    JSON.parse(localStorage.getItem("tasks")) || []
   );
 
   const areAllTasksDone = tasks.every((task) => task.done);
   const areAnyDone = tasks.some((task) => task.done);
 
-  const [tasksHidden, setTasksHidden] = useState( JSON.parse(localStorage.getItem("tasksHidden")) || false);
+  const [tasksHidden, setTasksHidden] = useState(
+    JSON.parse(localStorage.getItem("tasksHidden")) || false
+  );
   const toggleTaskHidden = () => {
     setTasksHidden(areAnyDone ? !tasksHidden : null);
   };
