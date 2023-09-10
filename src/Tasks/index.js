@@ -9,27 +9,29 @@ const Tasks = ({ tasks, tasksHidden, toggleTaskDone, removeTask }) => (
           task.done && tasksHidden ? "tasks__item--hidden" : ""
         }`}
       >
-        <button
-          className="tasks__button tasks__button--green"
-          onClick={() => toggleTaskDone(task.id)}
-        >
-          {task.done ? (
-            <i className="fa fa-check" aria-hidden="true"></i>
-          ) : null}
-        </button>
-        <span
-          className={`tasks__taskContent ${
-            task.done && "tasks__taskContent--crossed"
-          }`}
-        >
-          {task.content}
-        </span>
-        <button
-          className="tasks__button tasks__buttonRemove"
-          onClick={() => removeTask(task.id)}
-        >
-          <i className="fa fa-trash"></i>
-        </button>
+            <button
+              className="tasks__button tasks__button--green"
+              onClick={() => toggleTaskDone(task.id)}
+            >
+              {task.done ? (
+                <i className="fa fa-check" aria-hidden="true"></i>
+              ) : null}
+            </button>
+
+            <span
+              className={`tasks__taskContent ${
+                task.done && "tasks__taskContent--crossed"
+              }`}
+            >
+              {task.content}
+            </span>
+            
+            <button
+              className="tasks__button tasks__buttonRemove"
+              onClick={() => removeTask(task.id)}
+            >
+              <i className="fa fa-trash"></i>
+            </button>
       </li>
     ))}
   </ul>
