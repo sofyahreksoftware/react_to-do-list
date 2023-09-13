@@ -1,21 +1,19 @@
-import { useState, useEffect } from "react";
+import { useLocalStorage } from "./useLocaleStorage";
 import Form from "./Form";
 import Tasks from "./Tasks";
 import Buttons from "./Buttons";
 import Section from "./Section";
 import Header from "./Header";
 
+
 function App() {
-  const [tasks, setTasks] = useState(
-    JSON.parse(localStorage.getItem("tasks")) || []
-  );
+  const [tasks, setTasks] = useLocalStorage("tasks", []);
+  const [tasksHidden, setTasksHidden] = useLocalStorage("tasksHidden", false);
 
   const areAllTasksDone = tasks.every((task) => task.done);
   const areAnyDone = tasks.some((task) => task.done);
 
-  const [tasksHidden, setTasksHidden] = useState(
-    JSON.parse(localStorage.getItem("tasksHidden")) || false
-  );
+
   const toggleTaskHidden = () => {
     setTasksHidden(areAnyDone ? !tasksHidden : null);
   };
@@ -48,11 +46,6 @@ function App() {
       },
     ]);
   };
-
-  useEffect(() => {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-    localStorage.setItem("tasksHidden", JSON.stringify(tasksHidden));
-  }, [tasks, tasksHidden]);
 
   return (
     <main>
