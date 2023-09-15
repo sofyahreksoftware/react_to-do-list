@@ -5,14 +5,10 @@ import Buttons from "./Buttons";
 import Section from "./Section";
 import Header from "./Header";
 
-
-function App() {
+const useTasks = () => {
   const [tasks, setTasks] = useLocalStorage("tasks", []);
   const [tasksHidden, setTasksHidden] = useLocalStorage("tasksHidden", false);
-
-  const areAllTasksDone = tasks.every((task) => task.done);
   const areAnyDone = tasks.some((task) => task.done);
-
 
   const toggleTaskHidden = () => {
     setTasksHidden(areAnyDone ? !tasksHidden : null);
@@ -46,6 +42,31 @@ function App() {
       },
     ]);
   };
+
+  return {
+    tasks,
+    tasksHidden,
+    toggleTaskHidden,
+    completeAllTasks,
+    toggleTaskDone,
+    removeTask,
+    addNewTask,
+  };
+};
+
+function App() {
+  const {
+    tasks,
+    tasksHidden,
+    toggleTaskHidden,
+    completeAllTasks,
+    toggleTaskDone,
+    removeTask,
+    addNewTask,
+  } = useTasks();
+
+  const areAllTasksDone = tasks.every((task) => task.done);
+
 
   return (
     <main>
