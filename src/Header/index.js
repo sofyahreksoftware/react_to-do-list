@@ -1,5 +1,5 @@
-import "./style.css";
+import { StyledHeader } from "./styled";
 
-const Header = ({ headerName }) => <h1 className="header">{headerName}</h1>;
+const Header = ({ headerName }) => <StyledHeader>{headerName}</StyledHeader>;
 
 export default Header;
