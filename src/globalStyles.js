@@ -17,5 +17,11 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0 auto;
   }
 
-  button:hover{cursor: pointer}
+  button:hover {
+    cursor: pointer
+  }
+
+  button:active {
+    border: 1.9px solid black
+  }
   `;
