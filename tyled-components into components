@@ -1,0 +1,47 @@
+[33m21bddf693e5ea767447705ec5ed5012fba2fa1cd[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m feat: added global styles with styled-components
+[33m989844224a5da24838a3d2b43c44ada1dcf2ed04[m format: formatted code
+[33m9025f097304f555ad788f3bd3ad19cdb2bfbc726[m feat: styled components-Buttons, Form, Header
+[33me318721f4b741e711adcc22973e1c26b6987e6e4[m feat: styled components in Section component
+[33m243798838f096ee217b435f941dd8ac243efd17f[m feat: added styled components to Tasks component
+[33mc3edd637a9985606daaa899d3d980d773c674dca[m chore: installed style-components
+[33m31e31a775800bc586f63d613a5ab87c979207a3e[m chore: added custom hook with task functions
+[33m6cc9bb86337e4cd28c5c4a0a48e7fa010942d7cf[m feat: added uselocalStorage Hook
+[33mceada9615801b07534c9f5f88c5684d2d4bbc09f[m organized Form, Tasks and Buttons components
+[33m7af8592048ddcb94de63dd2d3301009b9da0e9a9[m feat: Added input focus after button click
+[33m5b4db3fc08c277b42e2b5162d2aa9e66bddccb05[m null to [ ], to envoke every method correctly
+[33ma178be5b3a6219aa862447fb4fa62272b417998d[m added hideDone saving to local storage
+[33m41429051c835b7e603479b8008eeacc67975eb7f[m fixed formatting of Header component
+[33m4f9ff3cb7a368850e38ab50e35b5578f7c6a8de1[m deleted manifest.json
+[33m5c23055c5946cede577c1f00627374203f1aefd0[m implemented task saving to local storage
+[33m8ae094dbfebdf0bfa54b039b459f833c349e3072[m refactored ID definition 2
+[33mc317bef954d56a34daa4e7d5fe2d6d42822c7efa[m fixed id definition in addNewTask function
+[33m26f058a2e40a6253735237fe612c499543ad5916[m added a hard space between button words
+[33m3988363405c36e05b4c4707b6e77f0bfa4c9e4c5[m fixed id specifying of added tasks
+[33maf20a751402468a56a41066c8746a3f0243dfa7a[m added form reset after submit
+[33m3dfb411eaeebb399f70cd8e5b482ef7faf792192[m added autofocus to iput
+[33m396a6236cbf7f85a25d5dd30be7c3a44c70ae2ed[m forbade form submit if task content is free
+[33m07ceb20dd769f05ad084da695d5e1c783506ce6b[m addded addNewTask interaction
+[33m46278f699044109364644a2c9f586954ed88cf71[m added removeTask interaction
+[33m2352fee6d7fa3e3e44097d819db1434d303c2bc8[m added toggleTaskDone ibnteraction
+[33m9c1713a19eed48040ea55ae132c865cf33ffdfe9[m added completeAllTasks interaction
+[33md33a48bc592d5b09b404fee371933b4687b7c2d8[m added toggleTaskHidden interaction
+[33m9981fadb102b6b3852094a92852cdf30094355c6[m added general section skeleton, fixed styling
+[33m32a699bca90e57430041086457aa40d899db1d1e[m removed unnecessary classes in Tasks block
+[33mae880f6e525279046905db40736facb632c9a933[m corrected code formatting in Header block
+[33m213b947f1b31d05d8ae755cb81acb81b72064e8d[m romoved unnecessary styling properties
+[33m3f4ac1c31b5ab0ef229d178fec3a6023c18aa771[m changed buttons <span> to <div> container
+[33mc4cc2602c6dad563f8b8a6c0fbe3c6e443ece24b[m added app screenshot to README.md
+[33made4d9b0e55c5f3d37a2e1927811cf36e46bc2ae[m removed left tasks margin
+[33m3f73a6ce89c4ef1831d313fdceb903fdec617345[m added technologies of project to README.md
+[33m74df5c0dba6cf6c59e803c177b2d5dc05d569339[m deleted favicon.ico
+[33m62f5eb8e49ffd7ccf8ecede3a269bc5dd9f99e51[m added og image
+[33ma71b37db3b4a4c316e86c3301264bcb872566be7[m changed link of main page in readme
+[33m0db1015410df609f77e982464eb401bb782a94dd[m added demo to README.md
+[33m895aec6e3a569fe4ca45a59237ad7596ee65560a[m odded github pages to the project
+[33m5ded67e1ce4b6a6bc261c9ef5745efacf07d0df9[m added instruction and description README.md
+[33m6169108374ac0a713b2011952c795c2c3bd09266[m changed app language to polish
+[33mb7ce30ff82965e86359d8f81f1763b7080cb7b5b[m finished creating interface
+[33m3c3183597ab81e7a7bfcac68285732f951879153[m to do list without interactions
+[33mee3009d5d6d5b47be8aa9c6606f78cbc769e63fb[m fixed bugs in app.js
+[33m2ba2260458c06302ff90446fee80bf8c48cfbb91[m added sceleton of to-do-list app
+[33m51548674ecdcd9c9baeba2a55f184f66b46f91fd[m Initialize project using Create React App
