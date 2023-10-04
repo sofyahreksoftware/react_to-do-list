@@ -18,7 +18,7 @@ This project was bootstrapped with [Create React App](https://sofyahreksoftware.
 - Flex
 - ReactDOM 
 - PostCSS  
-
+- styled components
 
 ## Description
 An application provides makind a to-do list. You also can mark and cross done tasks.
