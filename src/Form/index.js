@@ -7,8 +7,11 @@ function Form({ addNewTask }) {
 
   const onFormSubmit = (event) => {
     event.preventDefault();
-    if (newTaskContent.trim() === "") return;
-    else addNewTask(newTaskContent.trim());
+    if (newTaskContent.trim() === "") {
+      return;
+    }
+
+    addNewTask(newTaskContent.trim());
     setNewTaskContent("");
   };
 
@@ -18,17 +21,17 @@ function Form({ addNewTask }) {
 
   return (
     <StyledForm onSubmit={onFormSubmit}>
-        <Input
-          className="form__input"
-          type="text"
-          placeholder="Co jest do zrobienia?"
-          autoFocus
-          ref={inputRef}
-          value={newTaskContent}
-          onChange={(event) => setNewTaskContent(event.target.value)}
-        />
+      <Input
+        className="form__input"
+        type="text"
+        placeholder="Co jest do zrobienia?"
+        autoFocus
+        ref={inputRef}
+        value={newTaskContent}
+        onChange={(event) => setNewTaskContent(event.target.value)}
+      />
 
-        <Button onClick={onInputFocus}>Dodaj zadanie</Button>
+      <Button onClick={onInputFocus}>Dodaj zadanie</Button>
     </StyledForm>
   );
 }

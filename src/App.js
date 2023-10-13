@@ -16,8 +16,6 @@ function App() {
     addNewTask,
   } = useTasks();
 
-  const areAllTasksDone = tasks.every((task) => task.done);
-
   return (
     <main>
       <Header headerName="Lista zadań" />
@@ -33,7 +31,6 @@ function App() {
             toggleTaskHidden={toggleTaskHidden}
             tasks={tasks}
             tasksHidden={tasksHidden}
-            areAllTasksDone={areAllTasksDone}
             completeAllTasks={completeAllTasks}
           />
         }
