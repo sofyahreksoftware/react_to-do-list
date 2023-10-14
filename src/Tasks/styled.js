@@ -27,8 +27,8 @@ export const Button = styled.button`
     border: none;
     transition: background-color 1s;
 
-    ${({ green }) =>
-      green &&
+    ${({ $green }) =>
+      $green &&
       css`
         background-color: green;
         color: white;
@@ -37,8 +37,8 @@ export const Button = styled.button`
         }
       `}
 
-    ${({ red }) =>
-      red &&
+    ${({ $red }) =>
+      $red &&
       css`
         background-color: hsl(0, 100%, 45%);
         color: white;
@@ -51,8 +51,8 @@ export const Button = styled.button`
 export const Content = styled.span`
     align-self: center;
     
-    ${({ crossed }) =>
-      crossed &&
+    ${({ $crossed }) =>
+      $crossed &&
       css`
         text-decoration: line-through;
       `}
