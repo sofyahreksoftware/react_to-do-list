@@ -1,28 +1,28 @@
 import styled from "styled-components";
 
 export const StyledButtons = styled.div`
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 
-    @media (max-width: 767px) {
-      grid-template-columns: 1fr;
-    }
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const Button = styled.button`
-    color: teal;
-    border: none;
-    background-color: white;
-    transition: 1s;
+  color: ${({ theme }) => theme.colors.teal};
+  border: none;
+  background-color: ${({ theme }) => theme.colors.white};
+  transition: 1s;
 
-    &:disabled {
-      color: grey;
-      &:hover {
-        color: grey;
-      }
-    }
-
+  &:disabled {
+    color: ${({ theme }) => theme.colors.grey};
     &:hover {
-      color: hsl(180, 100%, 32%);
+      color: ${({ theme }) => theme.colors.grey};
     }
+  }
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.persianGreen};
+  }
 `;
