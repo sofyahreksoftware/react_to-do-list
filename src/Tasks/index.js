@@ -3,7 +3,7 @@ import { List, Item, Button, Content } from "./styled";
 const Tasks = ({ tasks, tasksHidden, toggleTaskDone, removeTask }) => (
   <List>
     {tasks.map((task) => (
-      <Item key={task.id} hidden={task.done && tasksHidden}>
+      <Item key={task.id} $hidden={task.done && tasksHidden}>
         <Button $green onClick={() => toggleTaskDone(task.id)}>
           {task.done ? (
             <i className="fa fa-check" aria-hidden="true"></i>

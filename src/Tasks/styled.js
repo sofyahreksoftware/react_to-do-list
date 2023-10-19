@@ -13,8 +13,8 @@ export const Item = styled.li`
   grid-template-columns: 1fr 7fr 1fr;
   grid-gap: 10px;
 
-  ${({ hidden }) =>
-    hidden &&
+  ${({ $hidden }) =>
+    $hidden &&
     css`
       display: none;
     `}

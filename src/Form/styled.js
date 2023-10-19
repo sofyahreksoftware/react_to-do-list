@@ -18,6 +18,7 @@ export const Input = styled.input`
   margin: 0 5px;
   padding: 8px;
   border: 1px solid ${({ theme }) => theme.colors.alto};
+  
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
     margin: 5px 0;
   }
