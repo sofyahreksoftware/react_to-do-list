@@ -19,6 +19,11 @@ This project was bootstrapped with [Create React App](https://sofyahreksoftware.
 - ReactDOM 
 - PostCSS  
 - styled components
+- theme
+- custom Hooks
+- useRef Hook
+- useState Hook
+- setInterval functions
 
 ## Description
 An application provides makind a to-do list. You also can mark and cross done tasks.
