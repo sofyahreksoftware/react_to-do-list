@@ -6,43 +6,23 @@ import Section from "../../common/Section";
 import Header from "../../common/Header";
 
 function Tasks() {
-  const {
-    tasks,
-    tasksHidden,
-    toggleTaskHidden,
-    completeAllTasks,
-    toggleTaskDone,
-    removeTask,
-    addNewTask,
-  } = useTasks();
-
+  const { toggleHideDone, tasksHidden } = useTasks();
+  
   return (
     <main>
       <Header headerName="Lista zadań" />
 
-      <Section
-        sectionBody={<Form addNewTask={addNewTask} />}
-        sectionTitle="Dodaj nowe zadanie"
-      />
+      <Section sectionBody={<Form />} sectionTitle="Dodaj nowe zadanie" />
 
       <Section
         headerAdditionalContent={
           <Buttons
-            toggleTaskHidden={toggleTaskHidden}
-            tasks={tasks}
             tasksHidden={tasksHidden}
-            completeAllTasks={completeAllTasks}
+            toggleHideDone={toggleHideDone}
           />
         }
         sectionTitle="Lista zadań"
-        sectionBody={
-          <TasksList
-            tasks={tasks}
-            tasksHidden={tasksHidden}
-            toggleTaskDone={toggleTaskDone}
-            removeTask={removeTask}
-          />
-        }
+        sectionBody={<TasksList tasksHidden={tasksHidden} />}
       />
     </main>
   );

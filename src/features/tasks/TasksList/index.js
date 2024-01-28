@@ -1,23 +1,47 @@
+import { useSelector, useDispatch } from "react-redux";
+
 import { List, Item, Button, Content } from "./styled";
+import {
+  selectTasks,
+  // selectTasksHidden,
+  toggleTaskDone,
+  removeTask,
+} from "../tasksSlice";
 
-const TasksList = ({ tasks, tasksHidden, toggleTaskDone, removeTask }) => (
-  <List>
-    {tasks.map((task) => (
-      <Item key={task.id} $hidden={task.done && tasksHidden}>
-        <Button $green onClick={() => toggleTaskDone(task.id)}>
-          {task.done ? (
-            <i className="fa fa-check" aria-hidden="true"></i>
-          ) : null}
-        </Button>
+const TasksList = () => {
+  const dispatch = useDispatch();
 
-        <Content $crossed={task.done}>{task.content}</Content>
+  const { tasks, tasksHidden } = useSelector(selectTasks);
 
-        <Button $red onClick={() => removeTask(task.id)}>
-          <i className="fa fa-trash"></i>
-        </Button>
-      </Item>
-    ))}
-  </List>
-);
+  return (
+    <List>
+      {tasks.map((task) => (
+        <Item key={task.id} $hidden={task.done && tasksHidden}>
+          <Button
+            $green
+            onClick={() => {
+              dispatch(toggleTaskDone(task.id));
+            }}
+          >
+            {task.done ? (
+              <i className="fa fa-check" aria-hidden="true"></i>
+            ) : null}
+          </Button>
+
+          <Content $crossed={task.done}>{task.content}</Content>
+
+          <Button
+            $red
+            onClick={() => {
+              dispatch(removeTask(task.id));
+            }}
+          >
+            <i className="fa fa-trash"></i>
+          </Button>
+        </Item>
+      ))}
+    </List>
+  );
+};
 
 export default TasksList;

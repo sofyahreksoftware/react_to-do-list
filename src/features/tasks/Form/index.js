@@ -1,7 +1,13 @@
 import { useState, useRef } from "react";
-import { StyledForm, Input, Button } from "./styled";
+import { useDispatch } from "react-redux";
+import { nanoid } from "nanoid";
 
-function Form({ addNewTask }) {
+import { StyledForm, Input, Button } from "./styled";
+import { addNewTask } from "../tasksSlice";
+
+function Form() {
+  const dispatch = useDispatch();
+
   const [newTaskContent, setNewTaskContent] = useState("");
   const inputRef = useRef(null);
 
@@ -11,7 +17,10 @@ function Form({ addNewTask }) {
       return;
     }
 
-    addNewTask(newTaskContent.trim());
+    dispatch(
+      addNewTask({ id: nanoid, content: newTaskContent.trim(), done: false })
+    );
+
     setNewTaskContent("");
   };
 
@@ -25,7 +34,6 @@ function Form({ addNewTask }) {
         className="form__input"
         type="text"
         placeholder="Co jest do zrobienia?"
-        autoFocus
         ref={inputRef}
         value={newTaskContent}
         onChange={(event) => setNewTaskContent(event.target.value)}
