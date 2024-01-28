@@ -7,7 +7,6 @@ function Buttons() {
   const dispatch = useDispatch();
 
   const { tasks, tasksHidden } = useSelector(selectTasks);
-  console.log(tasksHidden);
 
   const areAllTasksDone = tasks.every((task) => task.done);
 

@@ -18,7 +18,7 @@ function Form() {
     }
 
     dispatch(
-      addNewTask({ id: nanoid, content: newTaskContent.trim(), done: false })
+      addNewTask({ id: nanoid(), content: newTaskContent.trim(), done: false })
     );
 
     setNewTaskContent("");
