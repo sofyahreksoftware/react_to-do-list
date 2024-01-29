@@ -1,4 +1,3 @@
-import { useTasks } from "./useTasks";
 import Form from "./Form";
 import TasksList from "./TasksList";
 import Buttons from "./Buttons";
@@ -6,8 +5,6 @@ import Section from "../../common/Section";
 import Header from "../../common/Header";
 
 function Tasks() {
-  const { toggleHideDone, tasksHidden } = useTasks();
-  
   return (
     <main>
       <Header headerName="Lista zadań" />
@@ -15,14 +12,9 @@ function Tasks() {
       <Section sectionBody={<Form />} sectionTitle="Dodaj nowe zadanie" />
 
       <Section
-        headerAdditionalContent={
-          <Buttons
-            tasksHidden={tasksHidden}
-            toggleHideDone={toggleHideDone}
-          />
-        }
+        headerAdditionalContent={<Buttons />}
         sectionTitle="Lista zadań"
-        sectionBody={<TasksList tasksHidden={tasksHidden} />}
+        sectionBody={<TasksList />}
       />
     </main>
   );
