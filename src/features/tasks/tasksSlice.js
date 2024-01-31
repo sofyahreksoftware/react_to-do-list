@@ -38,7 +38,10 @@ const tasksSlice = createSlice({
 
 export const selectTasks = (state) => state.tasks;
 
-// export const selectTasksHidden = (state) => state.tasks.tasksHidden;
+export const selectTasksHidden = (state) => state.tasks.tasksHidden;
+
+export const selectAreAllTasksDone = (state) =>
+  state.tasks.tasks.every((task) => task.done);
 
 export const {
   addNewTask,
