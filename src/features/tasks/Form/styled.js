@@ -7,7 +7,7 @@ export const StyledForm = styled.form`
   margin: 5px 5px 0;
   flex-wrap: nowrap;
 
-  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+  @media (max-width: ${({ theme }) => theme.media.mobile}px) {
     flex-wrap: wrap;
     flex-direction: column;
   }
@@ -19,7 +19,7 @@ export const Input = styled.input`
   padding: 8px;
   border: 1px solid ${({ theme }) => theme.colors.alto};
   
-  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+  @media (max-width: ${({ theme }) => theme.media.mobile}px) {
     margin: 5px 0;
   }
 `;
