@@ -10,7 +10,7 @@ This project was bootstrapped with [Create React App](https://sofyahreksoftware.
 
 - **HTML**
 - Open Graph Protocol
-- Google Fonst
+- Google Fonts
 
 - **CSS**
 - Normalize CSS
@@ -38,7 +38,7 @@ This project was bootstrapped with [Create React App](https://sofyahreksoftware.
 
 ## Description
 
-An application provides makind a to-do-list. You also can mark and cross done tasks.
+An application provides making a to-do-list. You also can mark and cross done tasks.
 
 ## Instruction. How to use an application?
 
@@ -46,7 +46,7 @@ An application provides makind a to-do-list. You also can mark and cross done ta
 
 ### <span style="color:yellow;">How to add a task?</span>
 
-To add a task you need to fill in a form with a task and click a button on the right or at the bottom if you use it on telephone?
+To add a task you need to fill in a form with a task and click a button on the right or at the bottom if you are using it on a mobile device?
 
 ### <span style="color:yellow;">How to remove task?</span>
 
