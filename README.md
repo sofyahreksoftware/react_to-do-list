@@ -38,23 +38,28 @@ This project was bootstrapped with [Create React App](https://sofyahreksoftware.
 
 ## Description
 
-An application provides making a to-do-list. You also can mark and cross done tasks.
+An application provides making a simple to-do-list. 
 
 ## Instruction. How to use an application?
 
 ![Screenshot of application](src/app-screenshot.png)
 
-### <span style="color:yellow;">How to add a task?</span>
+### How to add a task? 
 
-To add a task you need to fill in a form with a task and click a button on the right or at the bottom if you are using it on a mobile device?
+To add a task you need to fill in a form with a task and click a button on the right or at the bottom if you are using it on a mobile device.
 
-### <span style="color:yellow;">How to remove task?</span>
+### How to remove task? 
 
-To remove a task you need to click a red button on the right side of the task?
+To remove a task you need to click a red button on the right side of the task.
 
-### <span style="color:yellow;">How to mark that the task is done?</span>
+### How to mark that the task is done?
 
-To mark that the task is done you need to click a green button on the left side of the task and then it will change to check mark?
+To mark that the task is done you need to click a green button on the left side of the task and then it will change to check mark.
+
+### How to save changes in to do list?
+ 
+The application features automatic task saving to **Local Storage**, so there's no need for manual saves.
+
 
 ## Available Scripts
 
