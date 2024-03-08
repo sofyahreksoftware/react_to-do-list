@@ -34,7 +34,8 @@ This project was bootstrapped with [Create React App](https://sofyahreksoftware.
 
 - **redux**
 - React-Redux
-- Redux Toolit
+- Redux Toolkit
+- store subscription
 
 ## Description
 
