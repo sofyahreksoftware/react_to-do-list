@@ -1,6 +1,7 @@
 import Form from "./Form";
 import TasksList from "./TasksList";
-import Buttons from "./Buttons";
+import MarkHideButtons from "./Buttons/MarkHideButtons";
+import FetchTasksButton from "./Buttons/FetchTasksButton";
 import Section from "../../common/Section";
 import Header from "../../common/Header";
 
@@ -9,10 +10,14 @@ function Tasks() {
     <main>
       <Header headerName="Lista zadań" />
 
-      <Section sectionBody={<Form />} sectionTitle="Dodaj nowe zadanie" />
+      <Section
+        headerAdditionalContent={<FetchTasksButton />}
+        sectionTitle="Dodaj nowe zadanie"
+        sectionBody={<Form />}
+      />
 
       <Section
-        headerAdditionalContent={<Buttons />}
+        headerAdditionalContent={<MarkHideButtons />}
         sectionTitle="Lista zadań"
         sectionBody={<TasksList />}
       />

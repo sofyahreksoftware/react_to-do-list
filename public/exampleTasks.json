@@ -1,0 +1,12 @@
+[
+  {
+    "id": "8jFXiO85XZH",
+    "content": "oznaczyc wszystkie zadania jako ukończone",
+    "done": false
+  },
+  {
+    "id": "lqIbUs27Wj2",
+    "content": "przeczytać dokumentację Redux-Sagi",
+    "done": false
+  }
+]
