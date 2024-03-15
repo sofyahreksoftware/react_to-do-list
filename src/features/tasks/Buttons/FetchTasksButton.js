@@ -10,7 +10,7 @@ function FetchTasksButton() {
 
   return (
     <>
-      {(fetchTasksStatus === undefined || "success") && (
+      {(fetchTasksStatus === undefined || fetchTasksStatus === "success") && (
         <StyledButton
           onClick={() => {
             dispatch(fetchExampleTasks());
