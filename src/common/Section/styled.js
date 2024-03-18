@@ -21,6 +21,11 @@ export const SectionHeader = styled.header`
 export const Title = styled.h2`
   padding: 5px;
   font-size: 22px;
+  font-weight: 700;
   padding: 7px;
   margin: -6px;
+`;
+
+export const Paragraph = styled.p`
+  margin: 20px 15px;
 `;

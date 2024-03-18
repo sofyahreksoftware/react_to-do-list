@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
 export const StyledHeader = styled.h1`
-   margin: 20px 40px;
+  margin: 20px 40px;
+  font-weight: 700;
 `;

@@ -12,7 +12,6 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     background-color: #ddd;
-    max-width: 900px;
     font-family: "Lato", sans-serif;
     margin: 0 auto;
   }

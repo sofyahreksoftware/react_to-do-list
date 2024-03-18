@@ -2,12 +2,13 @@ import Form from "./Form";
 import TasksList from "./TasksList";
 import MarkHideButtons from "./Buttons/MarkHideButtons";
 import FetchTasksButton from "./Buttons/FetchTasksButton";
-import Section from "../../common/Section";
-import Header from "../../common/Header";
+import {Section} from "../../common/Section";
+import {Header} from "../../common/Header";
+import { Container } from "../../common/Container";
 
 function Tasks() {
   return (
-    <main>
+    <Container>
       <Header headerName="Lista zadań" />
 
       <Section
@@ -21,7 +22,7 @@ function Tasks() {
         sectionTitle="Lista zadań"
         sectionBody={<TasksList />}
       />
-    </main>
+    </Container>
   );
 }
 
