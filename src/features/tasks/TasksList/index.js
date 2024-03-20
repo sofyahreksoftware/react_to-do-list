@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 
-import { List, Item, Button, Content } from "./styled";
+import { List, Item, StyledLink, Button } from "./styled";
 import {
   selectTasks,
   selectTasksHidden,
@@ -11,7 +11,7 @@ import {
 const TasksList = () => {
   const dispatch = useDispatch();
 
-  const {tasks} = useSelector(selectTasks);
+  const { tasks } = useSelector(selectTasks);
   const tasksHidden = useSelector(selectTasksHidden);
 
   return (
@@ -29,7 +29,9 @@ const TasksList = () => {
             ) : null}
           </Button>
 
-          <Content $crossed={task.done}>{task.content}</Content>
+          <StyledLink to={`/tasks/${task.id}`} $crossed={task.done}>
+            {task.content}
+          </StyledLink>
 
           <Button
             $red

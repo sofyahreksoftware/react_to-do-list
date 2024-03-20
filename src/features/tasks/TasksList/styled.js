@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import styled, { css } from "styled-components";
 
 export const List = styled.ul`
@@ -18,6 +20,23 @@ export const Item = styled.li`
     css`
       display: none;
     `}
+`;
+
+export const StyledLink = styled(Link)`
+  color: ${({ theme }) => theme.colors.persianGreen};
+  text-decoration: none;
+  font-weight: 500;
+  align-self: center;
+
+  ${({ $crossed }) =>
+    $crossed &&
+    css`
+      text-decoration: line-through;
+    `}
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.bondiBlue};
+  }
 `;
 
 export const Button = styled.button`
@@ -46,15 +65,5 @@ export const Button = styled.button`
       &:hover {
         background-color: ${({ theme }) => theme.colors.lightRed};
       }
-    `}
-`;
-
-export const Content = styled.span`
-  align-self: center;
-
-  ${({ $crossed }) =>
-    $crossed &&
-    css`
-      text-decoration: line-through;
     `}
 `;

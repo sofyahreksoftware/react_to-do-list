@@ -11,6 +11,7 @@ function App() {
       <Navigation />
       <Routes>
         <Route path="/" element={<Tasks />} />
+        <Route path="/tasks/:taskId" element={<Task />} />
         <Route path="/about" element={<About />} />
       </Routes>
     </HashRouter>

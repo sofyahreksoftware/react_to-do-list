@@ -52,6 +52,13 @@ const tasksSlice = createSlice({
 
 export const selectTasks = (state) => state.tasks;
 
+export const selectTaskById = (state, taskId) => {
+  if (state.tasks.tasks.some((task) => task.id === taskId)) {
+    return state.tasks.tasks.find((task) => task.id === taskId);
+  }
+  return "";
+};
+
 export const selectTasksHidden = (state) => state.tasks.tasksHidden;
 
 export const selectFetchTasksStatus = (state) => state.tasks.fetchTasksStatus;
