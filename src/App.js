@@ -1,30 +1,14 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
 
-import { Nav, NavList, StyledNavLink } from "./styledApp";
+import { Navigation } from "./common/Navigation";
 import Tasks from "./features/tasks/Tasks";
+import Task from "./features/tasks/Task";
 import About from "./features/about/About";
 
 function App() {
   return (
     <HashRouter>
-      <Nav>
-        <NavList>
-          <StyledNavLink
-            to="/"
-            className={({ isActive }) => (isActive ? "active" : "")}
-          >
-            Zadania
-          </StyledNavLink>
-
-          <StyledNavLink
-            to="/about"
-            className={({ isActive }) => (isActive ? "active" : "")}
-          >
-            O autorze
-          </StyledNavLink>
-        </NavList>
-      </Nav>
-
+      <Navigation />
       <Routes>
         <Route path="/" element={<Tasks />} />
         <Route path="/about" element={<About />} />

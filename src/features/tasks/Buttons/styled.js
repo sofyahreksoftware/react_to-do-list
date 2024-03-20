@@ -25,7 +25,7 @@ export const StyledButton = styled.button`
   &:disabled {
     color: ${({ theme }) => theme.colors.grey};
     &:hover {
-      color: ${({ theme }) => theme.colors.grey};
+      color: ${({ theme }) => theme.colors.bondiBlue};
     }
   }
 

@@ -15,8 +15,13 @@ export const NavList = styled.ul`
 export const StyledNavLink = styled(NavLink)`
   color: white;
   text-decoration: none;
+  transition: transform 1s;
 
   &.active {
     font-weight: 900;
+  }
+
+  &:hover {
+    transform: scale(1.05);
   }
 `;

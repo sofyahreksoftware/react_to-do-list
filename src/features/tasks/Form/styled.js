@@ -33,7 +33,7 @@ export const Button = styled.button`
   transition: background-color 1s, scale 1s;
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.persianGreen};
+    background-color: ${({ theme }) => theme.colors.bondiBlue};
     scale: 1.04;
   }
 `;

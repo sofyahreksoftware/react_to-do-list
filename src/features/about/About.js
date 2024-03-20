@@ -19,7 +19,7 @@ function About() {
             </Paragraph>
             <Paragraph>
               Niesamowicie pasjonuje mnie <strong>historia mody</strong>. Według
-              mnie lata <b>najpiękniejszych stylizacji</b> i
+              mnie lata <b>najpiękniejszych stylizacji</b> i{" "}
               <b>wybitnych projektantów</b> nastąpiły w <em>drugim</em>{" "}
               dziesięcioleciu poprzedniego wieku: ach te perły🦪, cekiny,
               wachlarze🪭, kabaretki, wysokie kapelusze🎩 i również te z
