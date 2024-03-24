@@ -1,5 +1,16 @@
 import styled from "styled-components";
 
+export const Input = styled.input`
+  flex-grow: 5;
+  margin: 0 5px;
+  padding: 8px;
+  border: 1px solid ${({ theme }) => theme.colors.alto};
+
+  @media (max-width: ${({ theme }) => theme.media.mobile}px) {
+    margin: 5px 0;
+  }
+`;
+
 export const StyledForm = styled.form`
   display: flex;
   padding: 13px 0 0;
@@ -10,17 +21,6 @@ export const StyledForm = styled.form`
   @media (max-width: ${({ theme }) => theme.media.mobile}px) {
     flex-wrap: wrap;
     flex-direction: column;
-  }
-`;
-
-export const Input = styled.input`
-  flex-grow: 5;
-  margin: 0 5px;
-  padding: 8px;
-  border: 1px solid ${({ theme }) => theme.colors.alto};
-  
-  @media (max-width: ${({ theme }) => theme.media.mobile}px) {
-    margin: 5px 0;
   }
 `;
 
