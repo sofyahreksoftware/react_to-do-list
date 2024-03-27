@@ -2,7 +2,7 @@ import Form from "./Form";
 import TasksList from "./TasksList";
 import MarkHideButtons from "./Buttons/MarkHideButtons";
 import FetchTasksButton from "./Buttons/FetchTasksButton";
-import SearchBar from "./SearchBar";
+import SearchBar from "./SearchBar/SearchBar";
 import { Section } from "../../common/Section";
 import { Header } from "../../common/Header";
 import { Container } from "../../common/Container";
