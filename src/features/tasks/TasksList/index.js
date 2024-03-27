@@ -1,8 +1,10 @@
 import { useSelector, useDispatch } from "react-redux";
 
+import { useQueryParameter } from "../SearchBar/useQueryParameter";
+import { searchQueryParamName } from "../SearchBar/searchQueryParamName";
 import { List, Item, StyledLink, Button } from "./styled";
 import {
-  selectTasks,
+  selectTasksByQuery,
   selectTasksHidden,
   toggleTaskDone,
   removeTask,
@@ -10,8 +12,9 @@ import {
 
 const TasksList = () => {
   const dispatch = useDispatch();
+  const { query } = useQueryParameter(searchQueryParamName);
 
-  const { tasks } = useSelector(selectTasks);
+  const { tasks } = useSelector((state) => selectTasksByQuery(state, query));
   const tasksHidden = useSelector(selectTasksHidden);
 
   return (

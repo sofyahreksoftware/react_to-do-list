@@ -52,6 +52,15 @@ const tasksSlice = createSlice({
 
 export const selectTasks = (state) => state.tasks;
 
+export const selectTasksByQuery = (state, query) => {
+  if (query && query.trim() !== "") {
+    return state.tasks.filter((task) =>
+      task.name.toUpperCase().includes(query.toUpperCase())
+    );
+  }
+  return state.tasks;
+};
+
 export const selectTaskById = (state, taskId) => {
   if (state.tasks.tasks.some((task) => task.id === taskId)) {
     return state.tasks.tasks.find((task) => task.id === taskId);
