@@ -50,30 +50,33 @@ const tasksSlice = createSlice({
   },
 });
 
-export const selectTasks = (state) => state.tasks;
+export const selectTasksState = (state) => state.tasks;
+
+export const selectTasks = (state) => selectTasksState(state).tasks;
 
 export const selectTasksByQuery = (state, query) => {
+  const tasks = selectTasks(state);
   if (query && query.trim() !== "") {
-    return state.tasks.filter((task) =>
-      task.name.toUpperCase().includes(query.toUpperCase())
+    return tasks.filter(({ content }) =>
+      content.toUpperCase().includes(query.toUpperCase())
     );
   }
-  return state.tasks;
+  return tasks;
 };
 
 export const selectTaskById = (state, taskId) => {
-  if (state.tasks.tasks.some((task) => task.id === taskId)) {
-    return state.tasks.tasks.find((task) => task.id === taskId);
+  if (selectTasks(state).some(({ id }) => id === taskId)) {
+    return selectTasks(state).find(({ id }) => id === taskId);
   }
   return "";
 };
 
-export const selectTasksHidden = (state) => state.tasks.tasksHidden;
+export const selectTasksHidden = (state) => selectTasksState(state).tasksHidden;
 
-export const selectFetchTasksStatus = (state) => state.tasks.fetchTasksStatus;
+export const selectFetchTasksStatus = (state) => selectTasksState(state).fetchTasksStatus;
 
 export const selectAreAllTasksDone = (state) =>
-  state.tasks.tasks.every((task) => task.done);
+  selectTasks(state).every(({ done }) => done);
 
 export const {
   addNewTask,

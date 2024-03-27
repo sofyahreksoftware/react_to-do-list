@@ -13,7 +13,7 @@ import {
 function MarkHideButtons() {
   const dispatch = useDispatch();
 
-  const { tasks } = useSelector(selectTasks);
+  const tasks = useSelector((state) => selectTasks(state));
   const tasksHidden = useSelector(selectTasksHidden);
   const areAllTasksDone = useSelector(selectAreAllTasksDone);
 

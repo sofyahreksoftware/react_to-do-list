@@ -14,7 +14,8 @@ const TasksList = () => {
   const dispatch = useDispatch();
   const { query } = useQueryParameter(searchQueryParamName);
 
-  const { tasks } = useSelector((state) => selectTasksByQuery(state, query));
+  const tasks = useSelector((state) => selectTasksByQuery(state, query));
+
   const tasksHidden = useSelector(selectTasksHidden);
 
   return (
