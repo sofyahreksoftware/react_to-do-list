@@ -1,7 +1,7 @@
-import { store } from "./store";
+import { store } from "../store";
 import {
   saveStateToLocalStorage,
-} from "./localStorageUtils";
+} from "../localStorageUtils";
 
 export const subscribeStore = () => {
   store.subscribe(() => {

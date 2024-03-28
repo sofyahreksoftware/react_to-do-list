@@ -7,9 +7,6 @@ import App from "./App";
 import { theme } from "./theme";
 import { GlobalStyle } from "./globalStyles";
 import { store } from "./store";
-import { subscribeStore } from "./subscribeStore";
-
-subscribeStore();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
