@@ -1,8 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+import { getStateFromLocalStorage } from "../../localStorageUtils";
+import { localStorageKey } from "../tasks/localStorageKey";
+
 const tasksSlice = createSlice({
   name: "tasks",
-  initialState: { tasks: [], tasksHidden: false, fetchTasksStatus: "" },
+  initialState: {
+    tasks: getStateFromLocalStorage(localStorageKey),
+    tasksHidden: false,
+    fetchTasksStatus: "",
+  },
   reducers: {
     addNewTask: (state, action) => {
       state.tasks.push(action.payload);
@@ -73,7 +80,8 @@ export const selectTaskById = (state, taskId) => {
 
 export const selectTasksHidden = (state) => selectTasksState(state).tasksHidden;
 
-export const selectFetchTasksStatus = (state) => selectTasksState(state).fetchTasksStatus;
+export const selectFetchTasksStatus = (state) =>
+  selectTasksState(state).fetchTasksStatus;
 
 export const selectAreAllTasksDone = (state) =>
   selectTasks(state).every(({ done }) => done);
