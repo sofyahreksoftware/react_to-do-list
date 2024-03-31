@@ -11,7 +11,6 @@ function Task() {
   const { taskId } = useParams();
 
   const task = useSelector((state) => selectTaskById(state, taskId));
-  console.log(task.content);
 
   return (
     <Container>
