@@ -5,8 +5,9 @@ import { getStateFromLocalStorage } from "../../localStorageUtils";
 const tasksSlice = createSlice({
   name: "tasks",
   initialState: {
-    tasks: getStateFromLocalStorage("tasks"),
-    tasksHidden: getStateFromLocalStorage("tasksHidden"),
+    tasks: getStateFromLocalStorage("tasks", []),
+    tasksHidden: getStateFromLocalStorage("tasksHidden", false),
+    fetchTasksStatus: "success",
   },
   reducers: {
     addNewTask: (state, action) => {

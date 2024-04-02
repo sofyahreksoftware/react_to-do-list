@@ -6,9 +6,9 @@ export const saveStateToLocalStorage = (keyName, value) => {
   }
 };
 
-export const getStateFromLocalStorage = (keyName) => {
+export const getStateFromLocalStorage = (keyName, initialValue) => {
   try {
-    const initialState = JSON.parse(localStorage.getItem(keyName)) || null;
+    const initialState = JSON.parse(localStorage.getItem(keyName)) || initialValue;
     return initialState;
   } catch (error) {
     console.error("Can not get initial state from Local storage", error);
