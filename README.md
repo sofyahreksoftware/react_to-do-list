@@ -8,59 +8,134 @@ This project was bootstrapped with [Create React App](https://sofyahreksoftware.
 
 ## Technologies
 
-- **HTML**
+### HTML
+
+- HTML5: Leveraging the latest HTML standards for structure and semantics.
+- Accessibility: Implementing ARIA roles and semantic HTML to enhance accessibility.
 - Open Graph Protocol
 - Google Fonts
 
-- **CSS**
-- Normalize CSS
-- CSS Box Model
-- BEM convention
-- Transition
-- Grid
-- Flexbox
+### JavaScript & Frameworks
 
+_Core Technologies_
+
+- **React**: The primary library for building the user interface, emphasizing reusable components.
+- **ReactDOM**: Manages rendering of React components in the DOM.
 - **Webpack**
 - **Babel**
 - **ReactDOM**
 - **PostCSS**
-- **React**
-- styled components
-- theme
-- custom Hooks (useTasks, useLocalStorage)
+
+_State Management_
+
+- store subscription
+- **Redux Toolkit**
+- createSlice
+- configureStore
+- **React-Redux**
+- Provider
+- useSelector
+- useDispatch
+
+_Utilities and Hooks_
+
+- Axios
+- Error Handling
+- nanoid
+- custom Hooks (useQueryParameter, usereplaceQueryParameter)
 - useRef Hook
 - useState Hook
-- useEffect Hook
+- URLSearchParams
 
-- **redux**
-- React-Redux
-- Redux Toolkit
-- store subscription
+_Routing_
+
+- **react-router-dom**
+- Hashrouter
+- Route
+- Link, Navlink
+- route params
+- useNavigate, useParams, useLocation
+
+_Asynchronous Logic_
+
+- **Redux Saga**
+- Generator Functions
+- efects(takeEvery, takeLatest, delay, select, put, call, fork, all)
+- Middleware
+
+_Styling and CSS Techniques_
+
+- Normalize CSS
+- CSS Box Model
+- CSS Transitions: Enhancing user experience with smooth transitions.
+- CSS Grid & Flexbox: Employing modern layout systems for responsive designs.
+- **Styled Components**
+- Theming
 
 ## Description
 
-An application provides making a simple to-do-list. 
+The application consists of two subpages: _tasks_ and _about the author_.
+![Screenshot of application. Tasks Subpage](src/app-ss-tasks.png)
+![Screenshot of application. About Subpage](src/app-ss-about.png)
+The tasks subpage provides _making a to-do-list_ with _adding_, _deleting_ and _marking tasks as complered_.
+Additionally, it is possible to **download sample tasks**.
+Also to manage them conveniently and easily you can **use the task search engine** and **go to the separate subpage of each of the added ones**.
+Yo can **hide done tasks** and **mark all of them as completed** by clicking the buttons.
 
-## Instruction. How to use an application?
+![Screenshot of application. Task Subpage](app-ss-task.png)
 
-![Screenshot of application](src/app-screenshot.png)
+## Instruction. How to use the application?
 
-### How to add a task? 
+### How to add a task?
 
-To add a task you need to fill in a form with a task and click a button on the right or at the bottom if you are using it on a mobile device.
+Fill in a form with a task content and click a button on the right side.
+![Adding a task. Tutorial](images&gifs/addingTask.gif)
 
-### How to remove task? 
+### How to mark that the task as done?
 
-To remove a task you need to click a red button on the right side of the task.
+Click a green button on the left side of the task.
 
-### How to mark that the task is done?
+### How to remove task?
 
-To mark that the task is done you need to click a green button on the left side of the task and then it will change to check mark.
+Click a red button on the right side of the task.
+![Marking the task as done & removing task. Tutorial](images&gifs/markDone&Remove.gif)
 
-### How to save changes in to do list?
- 
+### How to mark that all tasks are done by clicking one button?
+
+Click the button on the top right corner of 3rd section.
+![Marking all tasks as done by clicking one button. Tutorial](images&gifs/markingAllAsDone.gif)
+
+### How to hide & show done tasks?
+
+Click the first button on the top of 3rd section.
+![Hiding & showing tasks have been completed. Tutorial.](images&gifs/hidingDoneTasks.gif)
+
+### How to fetch example tasks?
+
+Click the button on the top right corner of 1th section. Wait for about 2-3 seconds while loading.
+![Fetching example tasks. Tutorial](images&gifs/fetchingExampleTasks.gif)
+
+### How to go to subpage with details of a given task?
+
+Click on the task whose details you want to display.
+![Going to task's details. Tutorial](images&gifs/tasksDetails.gif)
+
+### How to search a given task in a task list?
+
+There are 2 options how ta search a given task.
+
+You can use an input in the second section. Enter a word or a full sentence in the box that the task you are searching for may contain. The tasks will be filtered by a query.
+Use a path. Write ?search=searching sentence/word at the end of it.
+![Searching tasks. Tutorial](images&gifs/searchingTasks.gif)
+
+### How to go to about subpage?
+
+Use the navigation at the top of the page - go to the "About" link.
+![Going to About subpage. Tutorial](images&gifs/goingToAboutSubpage.gif)
+
+### How to save changes in to-do list?
+
 The application features automatic task saving to **Local Storage**, so there's no need for manual saves.
-
 
 ## Available Scripts
 
