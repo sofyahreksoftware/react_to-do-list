@@ -1,6 +1,6 @@
 import { takeEvery, select, call } from "redux-saga/effects";
 
-import { saveStateToLocalStorage } from "../../localStorageUtils";
+import { saveStateToLocalStorage } from "./localStorageUtils";
 import { selectTasks, selectTasksHidden } from "./tasksSlice";
 import { toggleHideDone } from "./tasksSlice";
 

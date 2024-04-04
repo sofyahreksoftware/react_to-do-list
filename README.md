@@ -75,8 +75,8 @@ _Styling and CSS Techniques_
 ## Description
 
 The application consists of two subpages: _tasks_ and _about the author_.
-![Screenshot of application. Tasks Subpage](src/app-ss-tasks.png)
-![Screenshot of application. About Subpage](src/app-ss-about.png)
+![Screenshot of application. Tasks Subpage](images&gifs/app-ss-tasks.png)
+![Screenshot of application. About Subpage](images&gifs/app-ss-about.png)
 The tasks subpage provides _making a to-do-list_ with _adding_, _deleting_ and _marking tasks as complered_.
 Additionally, it is possible to **download sample tasks**.
 Also to manage them conveniently and easily you can **use the task search engine** and **go to the separate subpage of each of the added ones**.
