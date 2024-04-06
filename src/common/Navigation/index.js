@@ -15,6 +15,7 @@ export const Navigation = () => {
         <BurgerBar />
         <BurgerBar />
       </BurgerButton>
+      
       <Nav $visible={navVisible}>
         <NavList>
           <StyledNavLink
