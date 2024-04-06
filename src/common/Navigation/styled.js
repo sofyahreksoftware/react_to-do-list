@@ -74,6 +74,7 @@ export const StyledNavLink = styled(NavLink)`
 
   &:hover {
     transform: scale(1.05);
+    border-bottom: solid 1px;
   }
 
   @media (max-width: ${({ theme }) => theme.media.mobile}px) {
