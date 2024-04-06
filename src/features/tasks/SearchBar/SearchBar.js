@@ -1,4 +1,4 @@
-import { StyledForm, Input } from "../StyledFormComponents";
+import { StyledForm, Input } from "../styledFormComponents";
 import { useReplaceQueryParameter } from "./useReplaceQueryParameter";
 import { searchQueryParamName } from "./searchQueryParamName";
 import { useQueryParameter } from "./useQueryParameter";

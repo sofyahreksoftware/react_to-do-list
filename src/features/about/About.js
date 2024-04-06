@@ -1,11 +1,11 @@
-import { Container } from "../../common/Container";
+import { StyledContainer } from "../../common/styledContainer";
 import { Header } from "../../common/Header";
 import { Section } from "../../common/Section";
 import { Paragraph } from "../../common/Section/styled";
 
 function About() {
   return (
-    <Container>
+    <StyledContainer>
       <Header headerName="O autorze" />
 
       <Section
@@ -34,7 +34,7 @@ function About() {
           </div>
         }
       />
-    </Container>
+    </StyledContainer>
   );
 }
 export default About;

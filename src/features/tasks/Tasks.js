@@ -5,11 +5,11 @@ import FetchTasksButton from "./Buttons/FetchTasksButton";
 import SearchBar from "./SearchBar/SearchBar";
 import { Section } from "../../common/Section";
 import { Header } from "../../common/Header";
-import { Container } from "../../common/Container";
+import { StyledContainer } from "../../common/styledContainer";
 
 function Tasks() {
   return (
-    <Container>
+    <StyledContainer>
       <Header headerName="Lista zadań" />
 
       <Section
@@ -25,7 +25,7 @@ function Tasks() {
         sectionTitle="Lista zadań"
         sectionBody={<TasksList />}
       />
-    </Container>
+    </StyledContainer>
   );
 }
 

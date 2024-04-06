@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 
 import { selectTaskById } from "./tasksSlice";
 import { Section } from "../../common/Section";
-import { Container } from "../../common/Container";
+import { StyledContainer} from "../../common/styledContainer";
 import { Header } from "../../common/Header";
 import { Paragraph } from "../../common/Section/styled";
 
@@ -13,7 +13,7 @@ function Task() {
   const task = useSelector((state) => selectTaskById(state, taskId));
 
   return (
-    <Container>
+    <StyledContainer>
       <Header headerName="Szczegóły zadania" />
 
       {task ? (
@@ -28,7 +28,7 @@ function Task() {
       ) : (
         <Section sectionTitle="Sorka, niestety nie ma takiego zadania🤪" />
       )}
-    </Container>
+    </StyledContainer>
   );
 }
 

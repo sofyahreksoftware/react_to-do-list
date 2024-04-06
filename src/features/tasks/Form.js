@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { nanoid } from "nanoid";
 
-import { StyledForm, Button, Input } from "./StyledFormComponents";
+import { StyledForm, Button, Input } from "./styledFormComponents";
 
 import { addNewTask } from "./tasksSlice";
 
