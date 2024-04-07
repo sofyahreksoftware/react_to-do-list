@@ -4,13 +4,13 @@ import MarkHideButtons from "./Buttons/MarkHideButtons";
 import FetchTasksButton from "./Buttons/FetchTasksButton";
 import SearchBar from "./SearchBar/SearchBar";
 import { Section } from "../../common/Section";
-import { Header } from "../../common/Header";
+import { StyledHeader } from "../../common/styledHeader";
 import { StyledContainer } from "../../common/styledContainer";
 
 function Tasks() {
   return (
     <StyledContainer>
-      <Header headerName="Lista zadań" />
+      <StyledHeader>Lista zadań </StyledHeader>
 
       <Section
         headerAdditionalContent={<FetchTasksButton />}

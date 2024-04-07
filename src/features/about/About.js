@@ -1,12 +1,12 @@
 import { StyledContainer } from "../../common/styledContainer";
-import { Header } from "../../common/Header";
+import { StyledHeader } from "../../common/styledHeader";
 import { Section } from "../../common/Section";
 import { Paragraph } from "../../common/Section/styled";
 
 function About() {
   return (
     <StyledContainer>
-      <Header headerName="O autorze" />
+      <StyledHeader>O autorze</StyledHeader>
 
       <Section
         sectionTitle="Sofya Hrek"

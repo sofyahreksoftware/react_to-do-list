@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { selectTaskById } from "./tasksSlice";
 import { Section } from "../../common/Section";
 import { StyledContainer } from "../../common/styledContainer";
-import { Header } from "../../common/Header";
+import { StyledHeader } from "../../common/styledHeader";
 import { Paragraph } from "../../common/Section/styled";
 
 function Task() {
@@ -14,7 +14,7 @@ function Task() {
 
   return (
     <StyledContainer>
-      <Header headerName="Szczegóły zadania" />
+      <StyledHeader>Szczegóły zadania </StyledHeader>
 
       {task ? (
         <Section
