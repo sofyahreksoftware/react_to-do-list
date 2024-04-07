@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 
 import { selectTaskById } from "./tasksSlice";
 import { Section } from "../../common/Section";
-import { StyledContainer} from "../../common/styledContainer";
+import { StyledContainer } from "../../common/styledContainer";
 import { Header } from "../../common/Header";
 import { Paragraph } from "../../common/Section/styled";
 
