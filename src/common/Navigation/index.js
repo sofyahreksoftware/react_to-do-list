@@ -1,5 +1,7 @@
-import { BurgerButton, BurgerBar, Nav, NavList, StyledNavLink } from "./styled";
 import { useState } from "react";
+
+import { toTasks, toAbout } from "../../routes";
+import { BurgerButton, BurgerBar, Nav, NavList, StyledNavLink } from "./styled";
 
 export const Navigation = () => {
   const [navVisible, setNavVisible] = useState(false);
@@ -15,18 +17,18 @@ export const Navigation = () => {
         <BurgerBar />
         <BurgerBar />
       </BurgerButton>
-      
+
       <Nav $visible={navVisible}>
         <NavList>
           <StyledNavLink
-            to="/"
+            to={toTasks()}
             className={({ isActive }) => (isActive ? "active" : "")}
           >
             Zadania
           </StyledNavLink>
 
           <StyledNavLink
-            to="/about"
+            to={toAbout()}
             className={({ isActive }) => (isActive ? "active" : "")}
           >
             O autorze

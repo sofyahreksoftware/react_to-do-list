@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { useQueryParameter } from "../SearchBar/useQueryParameter";
 import { searchQueryParamName } from "../SearchBar/searchQueryParamName";
+import { toTask } from "../../../routes";
 import { List, Item, StyledLink, Button } from "./styled";
 import {
   selectTasksByQuery,
@@ -33,7 +34,7 @@ const TasksList = () => {
             ) : null}
           </Button>
 
-          <StyledLink to={`/tasks/${task.id}`} $crossed={task.done}>
+          <StyledLink to={toTask({ taskId: task.id })} $crossed={task.done}>
             {task.content}
           </StyledLink>
 
