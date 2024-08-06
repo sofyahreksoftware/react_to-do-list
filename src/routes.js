@@ -1,6 +1,5 @@
-export const toTasks = () => "/";
+export const toTasks = () => "/tasks";
 
-export const toTask = ({ taskId } = { taskId: ":taskId" }) =>
-  `/tasks/${taskId}`;
+export const toTask = ({ id } = { id: ":taskId" }) => `/tasks/${id}`;
 
 export const toAbout = () => "/about";

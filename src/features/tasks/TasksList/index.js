@@ -34,7 +34,7 @@ const TasksList = () => {
             ) : null}
           </Button>
 
-          <StyledLink to={toTask({ taskId: task.id })} $crossed={task.done}>
+          <StyledLink to={toTask({ id: task.id })} $crossed={task.done}>
             {task.content}
           </StyledLink>
 
