@@ -23,7 +23,6 @@ _Core Technologies_
 - **ReactDOM**: Manages rendering of React components in the DOM.
 - **Webpack**
 - **Babel**
-- **ReactDOM**
 - **PostCSS**
 
 _State Management_
