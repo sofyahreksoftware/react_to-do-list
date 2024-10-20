@@ -1,6 +1,5 @@
 export const theme = {
   media: { mobile: 767 },
-
   colors: {
     alto: "#dddddd",
     white: "#ffffff",
@@ -12,7 +11,6 @@ export const theme = {
     lightGreen: "#00B300",
     red: "#ff0000",
     lightRed: "#ff4d4d",
-    pineTree: "#021302"
+    pineTree: "#021302",
   },
-
-};
+} as const;
