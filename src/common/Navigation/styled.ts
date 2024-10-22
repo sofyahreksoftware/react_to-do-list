@@ -36,7 +36,7 @@ export const BurgerBar = styled.span`
   display: block;
 `;
 
-export const Nav = styled.nav`
+export const Nav = styled.nav<{ $visible: boolean }>`
   background-color: teal;
   padding: 3px;
   top: 0;

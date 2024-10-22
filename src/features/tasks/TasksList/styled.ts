@@ -8,7 +8,7 @@ export const List = styled.ul`
   margin: 0;
 `;
 
-export const Item = styled.li`
+export const Item = styled.li<{ $hidden: boolean }>`
   border-bottom: 1px solid ${({ theme }) => theme.colors.alto};
   padding: 10px;
   display: grid;
@@ -22,7 +22,7 @@ export const Item = styled.li`
     `}
 `;
 
-export const StyledLink = styled(Link)`
+export const StyledLink = styled(Link)<{ $crossed: boolean }>`
   color: ${({ theme }) => theme.colors.persianGreen};
   text-decoration: none;
   font-weight: 500;
@@ -39,7 +39,7 @@ export const StyledLink = styled(Link)`
   }
 `;
 
-export const Button = styled.button`
+export const Button = styled.button<{ $green: boolean; $red: boolean }>`
   width: 30px;
   height: 30px;
   justify-self: center;
