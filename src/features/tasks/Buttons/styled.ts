@@ -10,7 +10,8 @@ export const StyledButtons = styled.div`
 `;
 
 export const StyledButton = styled.button<{
-  $error: boolean;
+  $error?: boolean;
+  disabled?: boolean;
 }>`
   color: ${({ theme }) => theme.colors.teal};
   border: none;

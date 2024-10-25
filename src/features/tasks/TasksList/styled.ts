@@ -39,7 +39,7 @@ export const StyledLink = styled(Link)<{ $crossed: boolean }>`
   }
 `;
 
-export const Button = styled.button<{ $green: boolean; $red: boolean }>`
+export const Button = styled.button<{ $green?: boolean; $red?: boolean }>`
   width: 30px;
   height: 30px;
   justify-self: center;

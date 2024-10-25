@@ -10,9 +10,9 @@ function Form() {
   const dispatch = useDispatch();
 
   const [newTaskContent, setNewTaskContent] = useState("");
-  const inputRef = useRef(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
-  const onFormSubmit = (event) => {
+  const onFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (newTaskContent.trim() === "") {
       return;
@@ -26,7 +26,7 @@ function Form() {
   };
 
   const onInputFocus = () => {
-    inputRef.current.focus();
+    inputRef.current!.focus();
   };
 
   return (

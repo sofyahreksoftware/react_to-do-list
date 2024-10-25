@@ -7,7 +7,7 @@ function SearchBar() {
   const { query } = useQueryParameter(searchQueryParamName);
   const { replaceQueryParameter } = useReplaceQueryParameter();
 
-  const onInputChange = (value) => {
+  const onInputChange = (value: string) => {
     replaceQueryParameter({
       key: searchQueryParamName,
       searchTerm: value.trim(),
