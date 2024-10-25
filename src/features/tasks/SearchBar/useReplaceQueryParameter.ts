@@ -6,7 +6,13 @@ export const useReplaceQueryParameter = () => {
 
   const searchParams = new URLSearchParams(location.search);
 
-  const replaceQueryParameter = ({ key, searchTerm }) => {
+  const replaceQueryParameter = ({
+    key,
+    searchTerm,
+  }: {
+    key: string;
+    searchTerm: string;
+  }) => {
     if (!searchTerm) {
       searchParams.delete(key);
     } else {
