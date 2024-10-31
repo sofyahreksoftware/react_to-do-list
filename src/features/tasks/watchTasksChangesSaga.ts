@@ -1,16 +1,19 @@
 import { takeEvery, select, call } from "redux-saga/effects";
 
+import { TaskProps, TasksStateProps } from "./types";
 import { saveStateToLocalStorage } from "./localStorageUtils";
 import { selectTasks, selectTasksHidden } from "./tasksSlice";
 import { toggleHideDone } from "./tasksSlice";
 
 function* saveTasksHiddenInLocalStorageHandler() {
-  const tasksHidden = yield select(selectTasksHidden);
+  const tasksHidden: TasksStateProps["tasksHidden"] = yield select(
+    selectTasksHidden
+  );
   yield call(saveStateToLocalStorage, "tasksHidden", tasksHidden);
 }
 
 function* saveTasksInLocalStorageHandler() {
-  const tasks = yield select(selectTasks);
+  const tasks: TaskProps[] = yield select(selectTasks);
   yield call(saveStateToLocalStorage, "tasks", tasks);
 }
 

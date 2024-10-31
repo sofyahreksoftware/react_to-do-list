@@ -9,13 +9,17 @@ export const StyledButtons = styled.div`
   }
 `;
 
-export const StyledButton = styled.button`
+export const StyledButton = styled.button<{
+  $error?: boolean;
+  disabled?: boolean;
+}>`
   color: ${({ theme }) => theme.colors.teal};
   border: none;
   padding: 3px;
   white-space: nowrap;
   background-color: ${({ theme }) => theme.colors.white};
   transition: 1s;
+
   ${({ $error }) =>
     $error &&
     css`

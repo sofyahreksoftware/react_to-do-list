@@ -1,5 +1,6 @@
 import { delay, call, put, takeLatest } from "redux-saga/effects";
 
+import { TaskProps } from "./types";
 import { getExampleTasks } from "./getExampleTasks";
 import {
   fetchExampleTasks,
@@ -8,7 +9,7 @@ import {
 } from "./tasksSlice";
 
 function* fetchExampleTasksHandler() {
-  const fetchedTasks = yield call(getExampleTasks);
+  const fetchedTasks: TaskProps[] = yield call(getExampleTasks);
 
   if (fetchedTasks) {
     yield delay(3000);

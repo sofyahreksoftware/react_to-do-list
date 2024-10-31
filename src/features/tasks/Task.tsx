@@ -1,16 +1,20 @@
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-import { selectTaskById } from "./tasksSlice";
+import { ReactNode } from "react";
+import { TasksStateProps } from "./types";
+import { selectTaskById, selectTasksState } from "./tasksSlice";
 import { Section } from "../../common/Section";
 import { StyledContainer } from "../../common/styledContainer";
 import { StyledHeader } from "../../common/styledHeader";
 import { Paragraph } from "../../common/Section/styled";
 
 function Task() {
-  const { taskId } = useParams();
+  const { taskId } = useParams<{ taskId: string }>();
 
-  const task = useSelector((state) => selectTaskById(state, taskId));
+  const task = useSelector((state: { tasks: TasksStateProps }) =>
+    selectTaskById(state, taskId!)
+  );
 
   return (
     <StyledContainer>
